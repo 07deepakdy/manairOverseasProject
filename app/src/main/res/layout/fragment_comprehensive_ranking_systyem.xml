@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.BlogFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/crsconstraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/crs"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/pagetitleback"
+                android:gravity="center"
+                android:text="Comprehensive Ranking System"
+                android:textColor="#ffffff"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Comprehensive Ranking System (CRS) tool: skilled immigrants (Express Entry)"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_margin="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/crs" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:layout_margin="12dp"
+                android:text="This tool will help you calculate your Comprehensive Ranking System (CRS) score based on the answers you provide below. The CRS is a points-based system that we use to assess and score your profile and rank it in the Express Entry pool. It’s used to assess your:
+
+\n\u25CF  skills
+\n\u25CF  education
+\n\u25CF  language ability
+\n\u25CF  work experience
+\n\u25CF  other factors"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="FILL UP THIS SIMPLE FORM AND WE SHALL ASSESS YOUR CRS RANKING!"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_margin="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/crsconstraint"
+            tools:layout_editor_absoluteX="138dp">
+
+            <ImageView
+                android:id="@+id/manair"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/manair"
+                app:layout_constraintEnd_toEndOf="@+id/phone"
+                app:layout_constraintStart_toStartOf="@+id/addressII"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/addressII"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="20dp"
+                android:text="SCO 333-334 2nd Floor"
+                android:textColor="@android:color/black"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/phoneI"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/manair" />
+
+            <TextView
+                android:id="@+id/phoneI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="2dp"
+                android:text="Phone:"
+                android:textColor="@android:color/black"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/phone"
+                app:layout_constraintStart_toEndOf="@+id/addressII"
+                app:layout_constraintTop_toBottomOf="@+id/manair" />
+
+            <TextView
+                android:id="@+id/addressI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginEnd="2dp"
+                android:text="Sector 35B,Chandigarh 160022"
+                android:textColor="@android:color/black"
+                android:textSize="12dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/emailI"
+                app:layout_constraintEnd_toStartOf="@+id/emailI"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/emailI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="29dp"
+                android:layout_marginEnd="1dp"
+                android:text="Email:"
+                android:textColor="@android:color/black"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/email"
+                app:layout_constraintStart_toEndOf="@+id/addressI"
+                app:layout_constraintTop_toBottomOf="@+id/phoneI" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="84dp"
+                android:text=" 0172-4037867"
+                android:textColor="@android:color/holo_blue_bright"
+                android:textSize="12dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/phoneI"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/phoneI" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="21dp"
+                android:text="info@manairoverseas.in"
+                android:textSize="12dp"
+                android:textColor="@android:color/holo_blue_bright"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/emailI"
+                app:layout_constraintTop_toBottomOf="@+id/phone" />
+
+            <TextView
+                android:id="@+id/copyright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="95dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="84dp"
+                android:layout_marginBottom="20dp"
+                android:text="Copyright 2020. All Rights Reserved."
+                android:textColor="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/facebook" />
+
+            <ImageView
+                android:id="@+id/facebook"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/fbbbb"
+                app:layout_constraintEnd_toStartOf="@+id/instagram"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addressI" />
+
+            <ImageView
+                android:id="@+id/instagram"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="140dp"
+                android:src="@drawable/instagram"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/facebook"
+                app:layout_constraintTop_toBottomOf="@+id/email" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

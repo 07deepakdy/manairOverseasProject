@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.BlogFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/crsconstraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/pagetitleback"
+                android:textColor="#ffffff"
+                android:id="@+id/studyvisa"
+                android:text="Study Visa"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/study"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="STUDY VISA:"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/studyvisa" />
+
+            <TextView
+                android:id="@+id/apply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:textSize="18dp"
+                android:textColor="@android:color/black"
+                android:layout_marginRight="8dp"
+                android:text="Need to apply for a Study Visa? We can assist!"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/study" />
+
+            <TextView
+                android:id="@+id/visa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/apply"
+                android:layout_marginTop="8dp"
+                android:textSize="18dp"
+                android:layout_marginLeft="8dp"
+                android:textStyle="bold"
+                android:layout_marginRight="8dp"
+                android:textColor="@android:color/black"
+                android:text="How does MANAIR help with visa applications?"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/apply" />
+
+            <TextView
+                android:id="@+id/maincontent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/visa"
+                android:layout_marginTop="8dp"
+                android:textSize="18dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@+id/visa"
+                android:text="If you’re a student, enroll with us to get an offer letter from any of our 700 partner Universities in Canada, New Zealand, Australia, the UK or the US, we can advise you on how to go about the entire process. We’ll make sure you are fully informed on the latest visa requirements and conditions and also help you prepare the right documents for your submission.
+
+Our team will direct you to the official websites and to authorized immigration representatives to ensure you have the latest applications forms and guidance. In fact, to reduce the hassle, we can also help with certifying, translating and couriering your documents."
+                tools:layout_editor_absoluteX="67dp"
+                tools:layout_editor_absoluteY="882dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/crsconstraint"
+            tools:layout_editor_absoluteX="138dp">
+
+            <ImageView
+                android:id="@+id/manair"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/manair"
+                app:layout_constraintEnd_toEndOf="@+id/phone"
+                app:layout_constraintStart_toStartOf="@+id/addressII"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/addressII"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="20dp"
+                android:text="SCO 333-334 2nd Floor"
+                android:textColor="@android:color/black"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/phoneI"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/manair" />
+
+            <TextView
+                android:id="@+id/phoneI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="2dp"
+                android:text="Phone:"
+                android:textColor="@android:color/black"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/phone"
+                app:layout_constraintStart_toEndOf="@+id/addressII"
+                app:layout_constraintTop_toBottomOf="@+id/manair" />
+
+            <TextView
+                android:id="@+id/addressI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginEnd="2dp"
+                android:text="Sector 35B,Chandigarh 160022"
+                android:textColor="@android:color/black"
+                android:textSize="12dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/emailI"
+                app:layout_constraintEnd_toStartOf="@+id/emailI"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/emailI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="29dp"
+                android:layout_marginEnd="1dp"
+                android:text="Email:"
+                android:textColor="@android:color/black"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/email"
+                app:layout_constraintStart_toEndOf="@+id/addressI"
+                app:layout_constraintTop_toBottomOf="@+id/phoneI" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="84dp"
+                android:text=" 0172-4037867"
+                android:textColor="@android:color/holo_blue_bright"
+                android:textSize="12dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/phoneI"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/phoneI" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="21dp"
+                android:text="info@manairoverseas.in"
+                android:textSize="12dp"
+                android:textColor="@android:color/holo_blue_bright"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/emailI"
+                app:layout_constraintTop_toBottomOf="@+id/phone" />
+
+            <TextView
+                android:id="@+id/copyright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="95dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="84dp"
+                android:layout_marginBottom="20dp"
+                android:text="Copyright 2020. All Rights Reserved."
+                android:textColor="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/facebook" />
+
+            <ImageView
+                android:id="@+id/facebook"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/fbbbb"
+                app:layout_constraintEnd_toStartOf="@+id/instagram"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addressI" />
+
+            <ImageView
+                android:id="@+id/instagram"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="140dp"
+                android:src="@drawable/instagram"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/facebook"
+                app:layout_constraintTop_toBottomOf="@+id/email" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

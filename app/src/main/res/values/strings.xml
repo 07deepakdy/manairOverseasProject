@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Manair Overseas</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google_maps_key">AIzaSyAEHn0_MumzgFLhVlHVK88HlLyt55b3XQs</string>
+    <string name="google_maps_key_debug">AIzaSyDGcnElAxpGa1GFtctv38K0t44Y7Ha7hm8</string>
+</resources>
