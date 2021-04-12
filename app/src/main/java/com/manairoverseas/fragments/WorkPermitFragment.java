@@ -47,11 +47,11 @@ Button submit;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View w=inflater.inflate(R.layout.fragment_work_permit, container, false);
-        agree=(CheckBox)w.findViewById(R.id.agree);
+        /*agree=(CheckBox)w.findViewById(R.id.agree);
         submit=(Button)w.findViewById(R.id.submit);
         submit.setEnabled(false);
         interest=(Spinner)w.findViewById(R.id.interest);
-        country=(Spinner)w.findViewById(R.id.country);
+        country=(Spinner)w.findViewById(R.id.country);*/
 
         facebook=(ImageView)w.findViewById(R.id.facebook);
         instagram=(ImageView)w.findViewById(R.id.instagram);
@@ -217,17 +217,7 @@ Button submit;
                 }
             }
         });
-        agree.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if(compoundButton.isChecked()){
-                    submit.setEnabled(true);
-                }
-                else{
-                    submit.setEnabled(false);
-                }
-            }
-        });
+
         // code for footer social media interaction
         facebook.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -299,40 +289,7 @@ Button submit;
         });
         ArrayAdapter ii=new ArrayAdapter(getActivity(),android.R.layout.simple_spinner_item,program);
         ii.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        interest.setAdapter(ii);
-        interest.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if(program[i]=="Select any Program"){
-                    return;
-                }else{
-                    selectedprogram=program[i];
-                }
-            }
 
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-                Toast.makeText(getActivity(), "Please select area of interest", Toast.LENGTH_SHORT).show();
-            }
-        });
-        ArrayAdapter cc=new ArrayAdapter(getActivity(),android.R.layout.simple_spinner_item,visitcountry);
-        cc.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        country.setAdapter(cc);
-        country.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if (visitcountry[i]=="Select any Country"){
-                    return;
-                }else{
-                    selectedcountry=visitcountry[i];
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-                Toast.makeText(getActivity(), "Please select any Country", Toast.LENGTH_SHORT).show();
-            }
-        });
         return w;
     }
 }

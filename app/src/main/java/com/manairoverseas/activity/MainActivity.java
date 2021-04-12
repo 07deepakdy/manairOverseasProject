@@ -1,6 +1,9 @@
 package com.manairoverseas.activity;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -9,11 +12,17 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.Manifest;
+import android.annotation.TargetApi;
+import android.content.DialogInterface;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 
 import com.manairoverseas.R;
@@ -44,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     private CustomAdapter listAdapter;
     private ExpandableListView simpleExpandableListView;
     private ImageView alert;
+    String []permissions={Manifest.permission.ACCESS_COARSE_LOCATION};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,17 +61,21 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         loadData();
-        alert=(ImageView)toolbar.findViewById(R.id.alert);
-        alert.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //addFragment(new AlertFragment());
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if(isPermissionGranted()){
+                //Toast.makeText(MainActivity.this, "Permission Granted", Toast.LENGTH_SHORT).show();
             }
-        });
+            else {
+                requestPermission();
+            }
+        }
+
 
         //get reference of the ExpandableListView
         simpleExpandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
         // create the adapter by passing your ArrayList data
+
         listAdapter = new CustomAdapter(MainActivity.this, deptList);
         // attach the adapter to the expandable list view
         simpleExpandableListView.setAdapter(listAdapter);
@@ -73,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction ft = fm.beginTransaction();
         ft.replace(R.id.frame, new HomeFragment());
         ft.commit();
+
         /*NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);*/
         simpleExpandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
@@ -85,34 +100,34 @@ public class MainActivity extends AppCompatActivity {
                 //display it or do something with it
                 // Toast.makeText(MainActivity.this, ""+detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 if(detailInfo.getName().equalsIgnoreCase("Study Visa")){
-                    addFragment(new StudyVisaFragment());
+                    replaceFragment(new StudyVisaFragment());
                 }
                 else if(detailInfo.getName().equalsIgnoreCase("Family Visa")){
-                    addFragment(new FamilyVisaFragment());
+                    replaceFragment(new FamilyVisaFragment());
                 }
                 else if(detailInfo.getName().equalsIgnoreCase("Tourist Visa")){
-                   addFragment(new TouristVisaFragment());
+                    replaceFragment(new TouristVisaFragment());
                 }
                 else if(detailInfo.getName().equalsIgnoreCase("Work Permit")){
-                    addFragment(new WorkPermitFragment());
+                    replaceFragment(new WorkPermitFragment());
                 }
                 else if(detailInfo.getName().equalsIgnoreCase("Permanent Residence")){
-                    addFragment(new ParmanentResidenceFragment());
+                    replaceFragment(new ParmanentResidenceFragment());
                 }
                 else if(detailInfo.getName().equalsIgnoreCase("PNP Program")){
-                    addFragment(new PnpFragment());
+                    replaceFragment(new PnpFragment());
                 }
                 else if(detailInfo.getName().equalsIgnoreCase("Express Entry Program")){
-                    addFragment(new ExpressEntryProgramFragment());
+                    replaceFragment(new ExpressEntryProgramFragment());
                 }
                 else if(detailInfo.getName().equalsIgnoreCase("CRS")){
-                    addFragment(new ComprehensiveRankingSystyemFragment());
+                    replaceFragment(new ComprehensiveRankingSystyemFragment());
                 }
                 else if(detailInfo.getName().equalsIgnoreCase("ECA")){
-                    addFragment(new EducationalCredentialAssessmentFragment());
+                    replaceFragment(new EducationalCredentialAssessmentFragment());
                 }
                 else if(detailInfo.getName().equalsIgnoreCase("Blog")){
-                    addFragment(new BlogFragment());
+                    replaceFragment(new BlogFragment());
                 }
 
                 DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -130,18 +145,18 @@ public class MainActivity extends AppCompatActivity {
                 //display it or do something with it
 
                 if(headerInfo.getName().equalsIgnoreCase("Home")){
-                    addFragment(new HomeFragment());
+                    replaceFragment(new HomeFragment());
                     DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
                     drawer.closeDrawer(GravityCompat.START);
                 }
                 else if(headerInfo.getName().equalsIgnoreCase("Candidate Login")){
 
-                    addFragment(new CandidateLoginFragment());
+                    replaceFragment(new CandidateLoginFragment());
                     DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
                     drawer.closeDrawer(GravityCompat.START);
                 }
                 else if(headerInfo.getName().equalsIgnoreCase("Contacts")){
-                    addFragment(new ContactUsFragment());
+                    replaceFragment(new ContactUsFragment());
                     DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
                     drawer.closeDrawer(GravityCompat.START);
                 }
@@ -164,42 +179,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
- /*   @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }*/
-
-    /*@SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-        } else if (id == R.id.nav_slideshow) {
-        } else if (id == R.id.nav_manage) {
-        } else if (id == R.id.nav_share) {
-        } else if (id == R.id.nav_send) {
-        }
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }*/
     //load some initial data into out list
     private void loadData(){
 
@@ -221,7 +200,6 @@ public class MainActivity extends AppCompatActivity {
 
     //here we maintain our products in various departments
     private int addProduct(String department, String product){
-
         int groupPosition = 0;
 
         //check the hash map if the group already exists
@@ -263,5 +241,70 @@ public class MainActivity extends AppCompatActivity {
         ft.commit();
         ft.addToBackStack(null);
 
+    }
+    public void replaceFragment(Fragment frag) {
+        FragmentManager manager = getSupportFragmentManager();
+        if (manager != null){
+            FragmentTransaction t = manager.beginTransaction();
+            Fragment currentFrag = manager.findFragmentById(R.id.frame);
+
+            //Check if the new Fragment is the same
+            //If it is, don't add to the back stack
+            if (currentFrag != null && currentFrag.getClass().equals(frag.getClass())) {
+                t.replace(R.id.frame, frag).commit();
+            } else {
+                t.replace(R.id.frame, frag).addToBackStack(null).commit();
+            }
+        }
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    private boolean isPermissionGranted(){
+        for(String permission:permissions){
+            if(checkSelfPermission(permission)!= PackageManager.PERMISSION_GRANTED){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    private void requestPermission(){
+        ArrayList<String> leftPer=new ArrayList<String>();
+        for(String permission:permissions){
+            if(checkSelfPermission(permission)!=PackageManager.PERMISSION_GRANTED){
+                leftPer.add(permission);
+            }
+        }
+        requestPermissions(leftPer.toArray(new String[leftPer.size()]),101);
+    }
+
+    @TargetApi(Build.VERSION_CODES.M)
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode==101){
+            for(int i=0;i<grantResults.length;i++){
+                if(shouldShowRequestPermissionRationale(permissions[i])){
+                    new AlertDialog.Builder(this)
+                            .setTitle("Permission Required")
+                            .setPositiveButton("Allow", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    requestPermission();
+                                }
+                            })
+                            .setNegativeButton("Deny", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            })
+                            .create()
+                            .show();
+
+                }
+            }
+        }
     }
 }

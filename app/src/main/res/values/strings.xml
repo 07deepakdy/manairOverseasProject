@@ -3,8 +3,15 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="Pref_file_key">Pref_file_key</string>
+    <string name="Pref_is_user_login">Pref_is_user_login</string>
+    <string name="Pref_user_name">Pref_user_name</string>
+    <string name="Pref_user_id">Pref_user_id</string>
+    <string name="Pref_candidate_id">Pref_candidate_id</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="google_maps_key">AIzaSyAEHn0_MumzgFLhVlHVK88HlLyt55b3XQs</string>
-    <string name="google_maps_key_debug">AIzaSyDGcnElAxpGa1GFtctv38K0t44Y7Ha7hm8</string>
+    <string name="google_maps_key">AIzaSyB_lG8cR4eq-QxHhRx79aCis9duGhBpdVs</string>
+    <string name="google_maps_key_release">AIzaSyCS2Ro7DssBt5fziW4X4JONHPNVytf_bXQ</string>
+
 </resources>

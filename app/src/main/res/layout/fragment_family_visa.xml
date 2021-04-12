@@ -101,15 +101,14 @@ That means your relatives can live, work and study in Canada once they get PR VI
                     android:id="@+id/dependentchild"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Eligibility of dependent child"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:paddingLeft="8dp"
-                    android:textSize="16sp"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_marginLeft="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="Eligibility of \ndependent child"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/whatitplus"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -122,7 +121,6 @@ That means your relatives can live, work and study in Canada once they get PR VI
                     android:src="@drawable/dependent_plus"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView9"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -130,10 +128,10 @@ That means your relatives can live, work and study in Canada once they get PR VI
                 android:id="@+id/dependentchilddetail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="22dp"
-                android:paddingLeft="16dp"
                 android:layout_marginLeft="16dp"
-                android:text="\n\u25CF Should be less than 22 years and don’t have any spouse and common-law partner.
+                android:layout_marginTop="4dp"
+                android:paddingLeft="16dp"
+                android:text="\u25CF Should be less than 22 years and don’t have any spouse and common-law partner.
 \n\u25CF Over 22 years of Age but should satisfy either of two conditions Mention below
 \n\u25CF Should be engaged in the full-time on-going study
 \n\u25CF Should be financially dependent on parents since before 22 years of age
@@ -147,7 +145,7 @@ That means your relatives can live, work and study in Canada once they get PR VI
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/dependentconstraint" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -176,16 +174,15 @@ That means your relatives can live, work and study in Canada once they get PR VI
                     android:id="@+id/spouse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Eligibility of Spouse"
-                    android:layout_marginTop="1dp"
                     android:layout_marginLeft="8dp"
-                    android:textColor="@color/black"
+                    android:layout_marginTop="1dp"
                     android:paddingLeft="8dp"
-                    android:textSize="16sp"
+                    android:text="Eligibility of \nSpouse"
                     android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/whatitplus"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -198,7 +195,6 @@ That means your relatives can live, work and study in Canada once they get PR VI
                     android:src="@drawable/dependent_plus"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView9"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -248,13 +244,12 @@ That means your relatives can live, work and study in Canada once they get PR VI
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="1dp"
                     android:paddingLeft="8dp"
-                    android:text="Eligibility of Grandparent and Parents "
+                    android:text="Eligibility of \nGrandparent and Parents "
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/whatitplus"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -267,7 +262,6 @@ That means your relatives can live, work and study in Canada once they get PR VI
                     android:src="@drawable/dependent_plus"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView9"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -320,16 +314,15 @@ However, there are certain circumstances, when the government of Canada will not
                     android:id="@+id/sponseredrelative"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Eligibility of Sponsored relative "
-                    android:layout_marginTop="1dp"
                     android:layout_marginLeft="8dp"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"
+                    android:layout_marginTop="1dp"
                     android:paddingLeft="8dp"
-                    android:textStyle="bold"
+                    android:text="Eligibility of \nSponsored relative "
                     android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/whatitplus"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -342,7 +335,6 @@ However, there are certain circumstances, when the government of Canada will not
                     android:src="@drawable/dependent_plus"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView9"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -393,16 +385,15 @@ As of November 5, 2011, no new applications to sponsor parents or grandparents w
                     android:id="@+id/canadianvisa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="How to apply for Canadian Family Visa?"
-                    android:layout_marginTop="1dp"
                     android:layout_marginLeft="8dp"
+                    android:layout_marginTop="1dp"
+                    android:paddingLeft="8dp"
+                    android:text="How to apply for \nCanadian Family Visa?"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:paddingLeft="8dp"
                     android:textStyle="bold"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/whatitplus"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -415,7 +406,6 @@ As of November 5, 2011, no new applications to sponsor parents or grandparents w
                     android:src="@drawable/dependent_plus"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView9"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -1,7 +1,14 @@
 package com.manairoverseas.model;
 
 public class BlogModel {
-    String mainheading,innerheading;
+    String mainheading;
+    int innerheading;
+
+
+    public BlogModel(String mainheading, int innerheading) {
+        this.mainheading = mainheading;
+        this.innerheading = innerheading;
+    }
 
     public String getMainheading() {
         return mainheading;
@@ -11,16 +18,11 @@ public class BlogModel {
         this.mainheading = mainheading;
     }
 
-    public String getInnerheading() {
+    public int getInnerheading() {
         return innerheading;
     }
 
-    public void setInnerheading(String innerheading) {
-        this.innerheading = innerheading;
-    }
-
-    public BlogModel(String mainheading, String innerheading) {
-        this.mainheading = mainheading;
+    public void setInnerheading(int innerheading) {
         this.innerheading = innerheading;
     }
 }

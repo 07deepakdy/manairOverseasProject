@@ -41,15 +41,13 @@
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="395dp"
+                android:layout_width="wrap_content"
                 android:layout_height="22dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginTop="3dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="4dp"
                 android:padding="0dp"
-                android:paddingLeft="8dp"
+
                 android:text="How the Provincial Nominee Program(PNP) works"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/black"
@@ -62,8 +60,9 @@
 
             <TextView
                 android:id="@+id/textView4"
-                android:layout_width="394dp"
-                android:layout_height="21dp"
+                android:layout_width="267dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="1dp"
                 android:padding="0dp"
@@ -71,15 +70,17 @@
                 android:textColor="@android:color/black"
                 android:textSize="18dp"
                 app:layout_constraintBottom_toTopOf="@+id/textView9"
-                app:layout_constraintEnd_toEndOf="@+id/textView2"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+            <!--Alberta Expand-->
 
             <TextView
                 android:id="@+id/textView9"
-                android:layout_width="391dp"
-                android:layout_height="127dp"
+                android:layout_width="378dp"
+                android:layout_height="117dp"
+                android:layout_marginEnd="9dp"
                 android:paddingLeft="8dp"
                 android:text="\u25CF have the skills,education and work experience to contribute to the economy of a specific province or territory
                            \n\u25CF want to live in that province, and
@@ -88,19 +89,14 @@
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toTopOf="@+id/textView10"
-                app:layout_constraintEnd_toEndOf="@+id/textView4"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/textView4"
                 app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-
-            <!--Alberta Expand-->
 
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="139dp"
                 android:layout_marginBottom="3dp"
                 android:paddingLeft="8dp"
                 android:text="Understand the application options"
@@ -109,22 +105,22 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/textView11"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
                 app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
             <TextView
                 android:id="@+id/textView11"
-                android:layout_width="387dp"
-                android:layout_height="111dp"
+                android:layout_width="371dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:padding="6dp"
+                android:layout_marginBottom="8dp"
+
                 android:text="How you will apply depends on which Provincial Nominee Program stream you’re applying to. You might need to apply using the paper-based process, or by the online process through Express Entry.
                           \nAs part of the process, you will have to pass a medical and get a check(certificate). Everyone must have these checks, no matter where they plan to live in Canada."
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/black"
-                android:textSize="16sp"
 
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/textView9"
                 app:layout_constraintStart_toStartOf="@+id/textView9"
@@ -145,6 +141,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout1">
 
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout3"
                 android:layout_width="match_parent"
@@ -163,15 +160,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginEnd="302dp"
                     android:paddingLeft="8dp"
+
                     android:text="AINP"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/albertaPlus"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.6" />
@@ -185,7 +181,6 @@
                     android:src="@drawable/dependent_plus"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/albertaText"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -194,9 +189,8 @@
                 android:id="@+id/albertaDetail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="22dp"
-                android:paddingLeft="16dp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginLeft="8dp"
+                android:paddingLeft="8dp"
                 android:text="Alberta’s provincial immigration program consists of three streams: The Alberta Opportunity Stream, the Alberta Express Entry Stream, and the Self-Employed Farmer Stream. The province issues provincial nominations to foreign nationals who meet program-specific criteria and demonstrate an intention to reside in the prairie province."
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/black"
@@ -233,7 +227,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginEnd="286dp"
                     android:paddingLeft="8dp"
                     android:text="BCPNP"
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -241,7 +234,6 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/britishPlus"
-                    app:layout_constraintEnd_toStartOf="@+id/britishPlus"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.666" />
@@ -253,7 +245,6 @@
                     android:layout_marginEnd="8dp"
                     android:src="@drawable/dependent_plus"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/britishText"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -306,7 +297,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginEnd="293dp"
                     android:paddingLeft="8dp"
                     android:text="MPNP"
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -314,7 +304,6 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/manitobaPlus"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -327,7 +316,6 @@
                     android:src="@drawable/dependent_plus"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/manitobaText"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -379,7 +367,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginEnd="285dp"
                     android:paddingLeft="8dp"
                     android:text="NBPNP"
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -387,7 +374,6 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/newBrunswickPlus"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -399,7 +385,6 @@
                     android:layout_marginEnd="8dp"
                     android:src="@drawable/dependent_plus"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/newBrunswickText"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -438,12 +423,11 @@
                 android:id="@+id/novaScotiaLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
                 android:layout_margin="8dp"
-                android:padding="4dp"
+                android:layout_marginTop="4dp"
                 android:background="@android:color/darker_gray"
+                android:padding="4dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
@@ -451,7 +435,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginEnd="299dp"
                     android:paddingLeft="8dp"
                     android:text="NBNP"
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -459,7 +442,6 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/novaScotiaPlus"
-                    app:layout_constraintEnd_toStartOf="@+id/novaScotiaPlus"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -471,7 +453,6 @@
                     android:layout_marginEnd="8dp"
                     android:src="@drawable/dependent_plus"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/novaScotiaText"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -524,7 +505,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginEnd="290dp"
                     android:paddingLeft="8dp"
                     android:text="NLPNP"
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -532,7 +512,6 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/newFoundlandPlus"
-                    app:layout_constraintEnd_toStartOf="@+id/newFoundlandPlus"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -544,7 +523,6 @@
                     android:layout_marginEnd="8dp"
                     android:src="@drawable/dependent_plus"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/newFoundlandText"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -595,7 +573,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginEnd="305dp"
                     android:paddingLeft="8dp"
                     android:text="OINP"
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -603,7 +580,6 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/ontarioPlus"
-                    app:layout_constraintEnd_toStartOf="@+id/ontarioPlus"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -615,7 +591,6 @@
                     android:layout_marginEnd="8dp"
                     android:src="@drawable/dependent_plus"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/ontarioText"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -667,7 +642,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginEnd="286dp"
                     android:paddingLeft="8dp"
                     android:text="PEIPNP"
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -675,7 +649,6 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/princeEdwardPlus"
-                    app:layout_constraintEnd_toStartOf="@+id/princeEdwardPlus"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -687,7 +660,6 @@
                     android:layout_marginEnd="5dp"
                     android:src="@drawable/dependent_plus"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/princeEdwardText"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -739,7 +711,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginEnd="306dp"
                     android:paddingLeft="8dp"
                     android:text="SINP"
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -747,7 +718,6 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/saskatchewanPlus"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -760,7 +730,6 @@
                     android:src="@drawable/dependent_plus"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/saskatchewanText"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -813,7 +782,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginEnd="296dp"
                     android:paddingLeft="8dp"
                     android:text="NTNP"
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -821,7 +789,6 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/northwestPlus"
-                    app:layout_constraintEnd_toStartOf="@+id/northwestPlus"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -833,7 +800,6 @@
                     android:layout_marginEnd="8dp"
                     android:src="@drawable/dependent_plus"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/northwestText"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -883,7 +849,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginEnd="307dp"
                     android:paddingLeft="8dp"
                     android:text="YNP"
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -891,7 +856,6 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/yukonPlus"
-                    app:layout_constraintEnd_toStartOf="@+id/yukonPlus"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -903,7 +867,6 @@
                     android:layout_marginEnd="8dp"
                     android:src="@drawable/dependent_plus"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/yukonText"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -942,8 +905,7 @@
                 android:padding="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraint1">
+                app:layout_constraintStart_toStartOf="parent">
 
                 <ImageView
                     android:id="@+id/manair"

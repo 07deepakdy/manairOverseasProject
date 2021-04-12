@@ -25,6 +25,13 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    sourceSets {
+        main {
+            assets {
+                srcDirs 'src\\main\\assets', 'src\\main\\assets\\fonts'
+            }
+        }
+    }
 }
 
 dependencies {
@@ -38,7 +45,14 @@ dependencies {
     implementation 'androidx.viewpager:viewpager:1.0.0'
     implementation 'me.relex:circleindicator:2.1.4'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    /*third party library*/
+    implementation 'com.squareup.retrofit2:retrofit:2.7.2'
+    implementation 'com.google.code.gson:gson:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.2'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

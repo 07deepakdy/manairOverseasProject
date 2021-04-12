@@ -9,7 +9,6 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-
         android:layout_height="match_parent">
 
 
@@ -105,16 +104,15 @@
                     android:id="@+id/agefactor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Age Factor"
-                    android:layout_marginTop="1dp"
                     android:layout_marginLeft="8dp"
-                    android:textColor="@color/black"
+                    android:layout_marginTop="1dp"
                     android:paddingLeft="8dp"
+                    android:text="Age Factor"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"
                     android:textSize="16dp"
                     android:textStyle="bold"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/whatitplus"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -127,7 +125,6 @@
                     android:src="@drawable/dependent_plus"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView9"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -163,10 +160,9 @@
                 android:id="@+id/languageclick"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
                 android:layout_margin="8dp"
-                android:padding="4dp"
                 android:background="@android:color/darker_gray"
+                android:padding="4dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -175,16 +171,15 @@
                     android:id="@+id/languageproficiency"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Language Proficiency"
-                    android:layout_marginTop="1dp"
                     android:layout_marginLeft="8dp"
-                    android:textColor="@color/black"
+                    android:layout_marginTop="1dp"
                     android:paddingLeft="8dp"
-                    android:textSize="16sp"
+                    android:text="Language Proficiency"
                     android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/whatitplus"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -197,7 +192,6 @@
                     android:src="@drawable/dependent_plus"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView9"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -234,7 +228,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:layout_marginTop="4dp"
                 android:background="@android:color/darker_gray"
                 android:padding="4dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -246,16 +239,15 @@
                     android:id="@+id/credential"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Educational Credential Assessment"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="1dp"
                     android:paddingLeft="8dp"
+                    android:text="ECA"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/whatitplus"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -268,7 +260,6 @@
                     android:src="@drawable/dependent_plus"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView9"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -286,10 +277,11 @@
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/eligibilitygpLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/credentialclick" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -315,16 +307,15 @@
                     android:id="@+id/experience"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Work Experience"
-                    android:layout_marginTop="1dp"
                     android:layout_marginLeft="8dp"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"
+                    android:layout_marginTop="1dp"
                     android:paddingLeft="8dp"
-                    android:textStyle="bold"
+                    android:text="Work Experience"
                     android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/whatitplus"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -337,7 +328,6 @@
                     android:src="@drawable/dependent_plus"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView9"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -345,137 +335,57 @@
                 android:id="@+id/experiencedetail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
-                android:text="To apply Canada PR, you must have at least 1 years of work experience. However, to get invitation to apply for Canada PR from IRCC, you must earn high enough points on the point based immigration system of Canada. Hence, work experience of at least 3 years can help you earn good points."
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
                 android:paddingLeft="16dp"
-                android:textSize="18sp"
+                android:text="To apply Canada PR, you must have at least 1 years of work experience. However, to get invitation to apply for Canada PR from IRCC, you must earn high enough points on the point based immigration system of Canada. Hence, work experience of at least 3 years can help you earn good points."
                 android:textColor="@color/black"
+                android:textSize="18sp"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/sponseredLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/experienceclick" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/applicationconstraint"
+         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout7"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#f4f6fb"
-            android:layout_marginEnd="10dp"
-            tools:layout_editor_absoluteX="0dp"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
-            tools:layout_editor_absoluteY="475dp">
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout6">
 
-            <TextView
-                android:id="@+id/textView20"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:gravity="center"
-                android:padding="3dp"
-                android:text="Application Form"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <EditText
-                android:id="@+id/nameedt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/form_background"
-                android:hint="Enter Full Name"
-                android:inputType="textPersonName"
-                android:padding="6dp"
-                android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView20" />
-
-            <EditText
-                android:id="@+id/emailedt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/form_background"
-                android:hint="Enter Email Address"
-                android:inputType="textEmailAddress"
-                android:padding="6dp"
-                android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nameedt" />
-
-            <EditText
-                android:id="@+id/phoneedt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/form_background"
-                android:hint="Enter Phone Number"
-                android:inputType="phone"
-                android:padding="6dp"
-                android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/emailedt" />
-
-            <EditText
-                android:id="@+id/message"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/form_background"
-                android:gravity="start|top"
-                android:hint="Enter Message"
-                android:inputType="textCapSentences|textMultiLine"
-                android:lines="10"
-                android:padding="8dp"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/phoneedt" />
-
-            <Button
-                android:id="@+id/send"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="161dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="153dp"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/sendbtnbg"
-                android:text="Send"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/message" />
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent">
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                 <Button
+                     android:id="@+id/send"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="8dp"
+                     android:layout_marginStart="152dp"
+                     android:layout_marginEnd="279dp"
+                     android:text="Apply here"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent" />
+             </androidx.constraintlayout.widget.ConstraintLayout>
+         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="4dp"
-            app:layout_constraintTop_toBottomOf="@+id/applicationconstraint"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7"
             tools:layout_editor_absoluteX="138dp">
 
             <ImageView
@@ -607,6 +517,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/facebook"
                 app:layout_constraintTop_toBottomOf="@+id/email" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

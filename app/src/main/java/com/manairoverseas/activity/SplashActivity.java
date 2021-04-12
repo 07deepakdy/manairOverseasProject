@@ -12,6 +12,7 @@ import com.manairoverseas.R;
 
 public class SplashActivity extends AppCompatActivity {
     ImageView gif;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

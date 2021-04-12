@@ -1,18 +1,14 @@
 package com.manairoverseas.model;
 
+import android.widget.ImageView;
+
 public class VisaType {
-    String visaType,visaDesc;
+    String visaDesc;
+    int visaType;
 
-    public VisaType(String visaType, String visaDesc) {
-        this.visaType = visaType;
+
+    public VisaType(String visaDesc, int visaType) {
         this.visaDesc = visaDesc;
-    }
-
-    public String getVisaType() {
-        return visaType;
-    }
-
-    public void setVisaType(String visaType) {
         this.visaType = visaType;
     }
 
@@ -22,5 +18,13 @@ public class VisaType {
 
     public void setVisaDesc(String visaDesc) {
         this.visaDesc = visaDesc;
+    }
+
+    public int getVisaType() {
+        return visaType;
+    }
+
+    public void setVisaType(int visaType) {
+        this.visaType = visaType;
     }
 }

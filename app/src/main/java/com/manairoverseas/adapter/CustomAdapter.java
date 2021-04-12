@@ -100,11 +100,13 @@ public class CustomAdapter extends BaseExpandableListAdapter {
 
     @Override
     public boolean hasStableIds() {
+
         return true;
     }
 
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {
+
         return true;
     }
 
